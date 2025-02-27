@@ -1,0 +1,39 @@
+🔔 Chức năng chính
+✅ Gửi email nhắc nhở công việc tự động dựa trên thông tin từ Google Sheets.
+
+✅ Nhắc trước 7 ngày và tiếp tục nhắc vào 12h00 và 20h00 mỗi ngày nếu nhiệm vụ chưa hoàn thành.
+
+✅ Gửi cảnh báo khẩn cấp nếu nhiệm vụ chỉ còn 1 ngày trước deadline.
+
+✅ Gửi thông báo ngay lập tức khi có thay đổi thời gian deadline.
+
+✅ Chỉ gửi email cho các nhiệm vụ chưa hoàn thành, bỏ qua các nhiệm vụ có trạng thái "Hoàn thành".
+
+✅ Tích hợp "Tắt nhắc nhở" – Người dùng có thể chọn "Có" trong cột "Tắt nhắc nhở" để ngừng nhận email.
+
+✅ Tạo link chính xác đến từng ô trong Google Sheets, giúp người nhận truy cập ngay vào nhiệm vụ cần xem.
+
+✅ Gộp nhiều nhiệm vụ của cùng một người vào một email duy nhất, tránh spam email.
+
+✅ Chạy script theo batch (Xử lý từng phần nhỏ) để tránh vượt giới hạn 6 phút của Google Apps Script.
+
+✅ Giới hạn số email gửi mỗi lần chạy (tối đa 50 email/lần) để tránh bị Google chặn.
+
+✅ Dùng CacheService để tránh kiểm tra dữ liệu lặp lại, giúp script chạy nhanh hơn.
+
+✅ Chạy script theo lịch trình (Trigger tự động):
+
+sendReminderEmails → Hàng ngày vào 12h00 & 20h00 để nhắc nhở.
+notifyTimeChange → Mỗi 30 phút để kiểm tra thay đổi deadline và gửi thông báo ngay lập tức.
+📌 Cải tiến hiệu suất
+✅ Chỉ lấy dữ liệu cần thiết từ Google Sheets (thay vì lấy toàn bộ bảng).
+✅ Hợp nhất email theo người nhận, giúp giảm số lần gửi email và tránh spam.
+✅ Dùng bộ nhớ Cache để ghi nhận nhiệm vụ đã được nhắc nhở, tránh xử lý lặp lại.
+✅ Chia nhỏ dữ liệu và lưu tiến trình xử lý, giúp tránh giới hạn thời gian chạy của Google.
+
+📌 Lợi ích khi sử dụng
+🔥 Hoàn toàn tự động, không cần theo dõi thủ công.
+🔥 Không làm phiền người dùng với email không cần thiết – Chỉ nhắc những nhiệm vụ quan trọng.
+🔥 Tránh quá tải và bị Google chặn do gửi quá nhiều email cùng lúc.
+🔥 Nhanh hơn 3-5 lần so với các script thông thường, nhờ vào việc tối ưu hóa xử lý.
+🔥 Dễ tùy chỉnh – Có thể thay đổi số ngày nhắc nhở, thời gian gửi email, và giới hạn email mỗi lần chạy.
